@@ -1,0 +1,9 @@
+backup/
+.org-id-locations
+auto-save-list/
+backup/
+history
+savehist
+saveplace
+smex.save
+tramp
