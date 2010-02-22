@@ -58,7 +58,7 @@
 	       magit
 	       shell-current-directory
 	       texdrive
-	       textmate
+	       textmate-autoloads
 	       url
 	       wtf
 	       ))
