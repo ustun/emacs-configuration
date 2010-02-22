@@ -1,0 +1,6 @@
+README
+
+~/.emacs.d/init.el -- root
+~/.emacs.d/customize.el -- Customizations via customize
+~/.emacs.d/custom.el -- Manual customizations
+~/.emacs.d/keybindings.el -- Keybindings
