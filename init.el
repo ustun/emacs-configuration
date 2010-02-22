@@ -39,6 +39,7 @@
   (mapcar #'require packages))
 
 (require-all '(
+	       cl
 	       uniquify
 	       color-theme
 	       ido
@@ -61,7 +62,9 @@
 	       textmate-autoloads
 	       url
 	       wtf
+	       framemove
 	       ))
+
 
 
 ;; Load non-packaged 3rd party functions
