@@ -222,3 +222,12 @@
 
 (global-font-lock-mode t)
 (setq font-lock-maximum-decoration t)
+
+;; Chrome editing
+(if (and (daemonp) (locate-library "edit-server"))
+         (progn
+           (require 'edit-server)
+           (edit-server-start)))
+
+;; Word wrap
+(add-hook 'text-mode-hook 'turn-on-visual-line-mode)
