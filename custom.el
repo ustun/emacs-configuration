@@ -4,7 +4,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq require-final-newline 't)
 (setq x-select-enable-clipboard t)
-(desktop-save-mode 1)
+;(desktop-save-mode 1) ; Causes annoyance all the time
 
 
 ;; LaTeX stuff
