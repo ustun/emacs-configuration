@@ -104,7 +104,7 @@
 (add-hook 'TeX-mode-hook 'turn-on-auto-fill)
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 
-(project-add "Wimaxofis" "~/wimax/")
+;(project-add "Wimaxofis" "~/wimax/")
 
 
 
@@ -120,14 +120,14 @@
 (smex-initialize)
 
 
-(org-remember-insinuate)
+;(org-remember-insinuate) ;disabling temporarily
 ;; you might also want to set:
 ;;   (setq org-agenda-skip-unavailable-files t)
 ;; so these warnings won't annoy the little remember-frame
 ;; also: I have noted infrequent problems when using ElScreen
 ;;  (the wrong frame might be chosen for Remember in about 10% of the cases)
 
-(scroll-bar-mode -1)
+;(scroll-bar-mode -1) ;disabling temporarily emacs 22
 					;(require 'highlight-parentheses)
 (column-number-mode 1)
 					;(mouse-avoidance-mode 'animate)
@@ -212,3 +212,8 @@
 
 (windmove-default-keybindings)
 (setq framemove-hook-into-windmove t)
+
+
+(if (eq system-type 'darwin)
+    (normal-erase-is-backspace-mode 1)		; fix del key deletes backwards on OS X
+  )

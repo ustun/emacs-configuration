@@ -41,10 +41,7 @@
 (require-all '(
 	       cl
 	       uniquify
-	       color-theme
 	       ido
-	       saveplace
-	       project-root
 	       saveplace
 	       scala-mode-auto
 	       yasnippet
