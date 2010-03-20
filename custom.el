@@ -4,7 +4,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq require-final-newline 't)
 (setq x-select-enable-clipboard t)
-(desktop-save-mode 1)
+;(desktop-save-mode 1) ; Causes annoyance all the time
 
 
 ;; LaTeX stuff
@@ -104,7 +104,7 @@
 (add-hook 'TeX-mode-hook 'turn-on-auto-fill)
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 
-(project-add "Wimaxofis" "~/wimax/")
+;(project-add "Wimaxofis" "~/wimax/")
 
 
 
@@ -120,14 +120,14 @@
 (smex-initialize)
 
 
-(org-remember-insinuate)
+;(org-remember-insinuate) ;disabling temporarily
 ;; you might also want to set:
 ;;   (setq org-agenda-skip-unavailable-files t)
 ;; so these warnings won't annoy the little remember-frame
 ;; also: I have noted infrequent problems when using ElScreen
 ;;  (the wrong frame might be chosen for Remember in about 10% of the cases)
 
-(scroll-bar-mode -1)
+;(scroll-bar-mode -1) ;disabling temporarily emacs 22
 					;(require 'highlight-parentheses)
 (column-number-mode 1)
 					;(mouse-avoidance-mode 'animate)
@@ -214,6 +214,7 @@
 (setq framemove-hook-into-windmove t)
 
 
+
 (setq auto-mode-alist (cons '("\\.py$" . python-mode) auto-mode-alist))
 (setq interpreter-mode-alist (cons '("python" . python-mode)
                                    interpreter-mode-alist))
@@ -237,3 +238,8 @@
 
 (autoload 'no-word "no-word" "word to txt")
 (add-to-list 'auto-mode-alist '("\\.doc\\'" . no-word))
+
+(if (eq system-type 'darwin)
+    (normal-erase-is-backspace-mode 1)		; fix del key deletes backwards on OS X
+  )
+
