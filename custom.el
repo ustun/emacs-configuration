@@ -231,3 +231,9 @@
 
 ;; Word wrap
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
+
+
+;; Antiword
+
+(autoload 'no-word "no-word" "word to txt")
+(add-to-list 'auto-mode-alist '("\\.doc\\'" . no-word))

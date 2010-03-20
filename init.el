@@ -63,6 +63,7 @@
 	       url
 	       wtf
 	       framemove
+	       sunrise-commander
 	       ))
 
 
