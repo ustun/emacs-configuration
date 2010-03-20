@@ -224,12 +224,19 @@
 (global-font-lock-mode t)
 (setq font-lock-maximum-decoration t)
 
+
+(defun dp/emacs-version-greater-than-23-p ()
+  "REVISIT: Document me, you fool!"
+  (interactive)
+  (> (string-to-number (car (split-string emacs-version "\\."))) 23))
+
 ;; Chrome editing
+(if (dp/emacs-version-greater-than-23-p)
 (if (and (daemonp) (locate-library "edit-server"))
          (progn
            (require 'edit-server)
            (edit-server-start)))
-
+)
 ;; Word wrap
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 
@@ -243,3 +250,5 @@
     (normal-erase-is-backspace-mode 1)		; fix del key deletes backwards on OS X
   )
 
+
+(setq visible-bell t) ; visible bell
