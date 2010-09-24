@@ -10,7 +10,7 @@
  '(comint-move-point-for-output nil)
  '(comint-scroll-show-maximum-output nil)
  '(comint-scroll-to-bottom-on-input t)
- '(debug-on-error t)
+ '(debug-on-error nil)
  '(dired-listing-switches "-ahlX")
  '(ecb-compile-window-height 6)
  '(ecb-layout-window-sizes nil)
