@@ -21,8 +21,8 @@
 ;; Loadpaths for some other packages
 
 (add-to-list 'load-path "/data/matlab08b/java/extern/EmacsLink")
-(setq cclookup-dir "~/Dropbox/OtherLisp/cclookup")
-(setq load-path (cons cclookup-dir load-path))
+(add-to-list 'load-path "~/Dropbox/Lisp/pony-mode")
+
 
 ;; Define locations of some other files
 (setq save-place-file "~/.emacs.d/saveplace") ;; keep my ~/ clean
@@ -46,6 +46,7 @@
 	       scala-mode-auto
 	       yasnippet
 	       smex
+	       zenburn
 	       highlight-parentheses
 	       smart-tab
 	       browse-kill-ring
@@ -63,7 +64,7 @@
 	       sunrise-commander
 	       ))
 
-
+					;pony-mode
 
 ;; Load non-packaged 3rd party functions
 (load-file "~/Dropbox/Lisp/functions3rdparty.el")

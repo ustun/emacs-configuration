@@ -3,7 +3,7 @@
 (setq inhibit-startup-message t)
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq require-final-newline 't)
-(setq x-select-enable-clipboard t)
+
 ;(desktop-save-mode 1) ; Causes annoyance all the time
 
 
@@ -74,7 +74,7 @@
 (load-file "~/Dropbox/Lisp/matlabemacs/matlab-load.el")
 					;(require 'semanticdb-matlab)
 ;; enable skeleton-pair insert globally
-(setq skeleton-pair t)
+;(setq skeleton-pair nil)
 
 
 
@@ -100,9 +100,9 @@
 					;(add-hook 'TeX-mode-hook 'color-theme-xp)
 
 
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
-(add-hook 'TeX-mode-hook 'turn-on-auto-fill)
-(add-hook 'org-mode-hook 'turn-on-auto-fill)
+;(add-hook 'text-mode-hook 'turn-on-auto-fill)
+;(add-hook 'TeX-mode-hook 'turn-on-auto-fill)
+;(add-hook 'org-mode-hook 'turn-on-auto-fill)
 
 ;(project-add "Wimaxofis" "~/wimax/")
 
@@ -137,7 +137,7 @@
 (setq uniquify-separator "|")
 (setq uniquify-after-kill-buffer-p t)
 (setq uniquify-ignore-buffers-re "^\\*")
-(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+
 (setq ibuffer-default-sorting-mode 'major-mode)
 (setq ibuffer-always-show-last-buffer t)
 
@@ -172,20 +172,6 @@
 
 (setq yas/my-directory "~/Dropbox/Lisp/scala-mode/contrib/yasnippet/snippets")
 (yas/load-directory yas/my-directory)
-
-(eval-when-compile (require 'cclookup))
-
-;; set executable file and db file
-(setq cclookup-program (concat cclookup-dir "/cclookup.py"))
-(setq cclookup-db-file (concat cclookup-dir "/cclookup.db"))
-
-;; to speedup, just load it on demand
-(autoload 'cclookup-lookup "cclookup"
-  "Lookup SEARCH-TERM in the Python HTML indexes." t)
-
-(autoload 'cclookup-update "cclookup"
-  "Run cclookup-update and create the database at `cclookup-db-file'." t)
-;;----------------------------------------------------------------------
 
 
 
@@ -238,7 +224,7 @@
            (edit-server-start)))
 )
 ;; Word wrap
-(add-hook 'text-mode-hook 'turn-on-visual-line-mode)
+;(add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 
 
 ;; Antiword
@@ -252,3 +238,19 @@
 
 
 (setq visible-bell t) ; visible bell
+
+;; (require 'django-html-mode)
+;; (require 'django-mode)
+;; (yas/load-directory "~/Dropbox/Lisp/django-mode/snippets")
+;; (add-to-list 'auto-mode-alist '("\\.djhtml$" . django-html-mode))
+
+
+(global-set-key [?\C-h] 'delete-backward-char)
+
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+(defun turn-on-paredit () (paredit-mode 1))
+(add-hook 'clojure-mode-hook 'turn-on-paredit)
