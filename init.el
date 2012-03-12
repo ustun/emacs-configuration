@@ -23,8 +23,8 @@
 (add-to-list 'load-path "/data/matlab08b/java/extern/EmacsLink")
 (add-to-list 'load-path "~/Dropbox/Lisp/pony-mode")
 
-(setq cclookup-dir "~/Dropbox/OtherLisp/cclookup")
-(setq load-path (cons cclookup-dir load-path))
+;(setq cclookup-dir "~/Dropbox/OtherLisp/cclookup")
+;(setq load-path (cons cclookup-dir load-path))
 
 ;; Define locations of some other files
 (setq save-place-file "~/.emacs.d/saveplace") ;; keep my ~/ clean

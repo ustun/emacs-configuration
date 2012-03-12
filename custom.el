@@ -3,7 +3,7 @@
 (setq inhibit-startup-message t)
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq require-final-newline 't)
-(setq x-select-enable-clipboard t)
+
 ;(desktop-save-mode 1) ; Causes annoyance all the time
 
 
@@ -137,7 +137,7 @@
 (setq uniquify-separator "|")
 (setq uniquify-after-kill-buffer-p t)
 (setq uniquify-ignore-buffers-re "^\\*")
-(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+
 (setq ibuffer-default-sorting-mode 'major-mode)
 (setq ibuffer-always-show-last-buffer t)
 
