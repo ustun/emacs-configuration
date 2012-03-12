@@ -28,6 +28,8 @@
 		       textmate
 		       wtf))
 
+; Enable these on first installation
+;(package-refresh-contents)
 ;(install-all-elpa elpa-packages)
 
 ;; (when
