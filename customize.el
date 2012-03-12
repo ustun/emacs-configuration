@@ -19,6 +19,7 @@
  '(eshell-scroll-to-bottom-on-output (quote this))
  '(grep-command "grep -niH *.m -e ")
  '(grep-template "grep <C> -niH -e <R> <F>")
+ '(initial-buffer-choice t)
  '(isearch-allow-scroll t)
  '(matlab-indent-function-body nil)
  '(matlab-shell-command-switches (quote ("-nodesktop -nosplash")))
@@ -53,6 +54,7 @@
  '(tool-bar-mode nil)
  '(tooltip-mode nil)
  '(uniquify-buffer-name-style (quote forward) nil (uniquify))
+ '(x-stretch-cursor nil)
  '(yas/prompt-functions (quote (yas/dropdown-prompt yas/x-prompt yas/completing-prompt yas/ido-prompt yas/no-prompt)))
  '(yas/use-menu (quote abbreviate)))
 
@@ -78,3 +80,9 @@
 )
 
 
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "white" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 109 :width normal :foundry "unknown" :family "DejaVu Sans Mono")))))
