@@ -11,6 +11,25 @@
 
 (require 'package)
 (package-initialize)
+
+(defun install-all-elpa (packages)
+  (mapcar #'package-install packages))
+
+(setq elpa-packages '( highlight-parentheses
+		       smart-tab
+		       smex
+		       blank-mode
+		       dired-isearch
+		       htmlize
+		       less
+		       magit
+		       shell-current-directory
+		       texdrive
+		       textmate
+		       wtf))
+
+;(install-all-elpa elpa-packages)
+
 ;; (when
 ;;     (load
 ;;      (expand-file-name "~/.emacs.d/elpa/package.el"))
@@ -88,5 +107,3 @@
 ;; Load keybindings file
 (setq keybindings-file "~/.emacs.d/keybindings.el")
 (load keybindings-file)
-
-
