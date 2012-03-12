@@ -5,10 +5,16 @@
 
 ;; Start ELPA first
 
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))
+(setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
+			 ("gnu" . "http://elpa.gnu.org/packages/")
+			 ("marmalade" . "http://marmalade-repo.org/packages/")))
+
+(require 'package)
+(package-initialize)
+;; (when
+;;     (load
+;;      (expand-file-name "~/.emacs.d/elpa/package.el"))
+;;   (package-initialize))
 
 ;; Prepare the load path for other external packages
 
@@ -20,7 +26,7 @@
 
 ;; Loadpaths for some other packages
 
-(add-to-list 'load-path "/data/matlab08b/java/extern/EmacsLink")
+;(add-to-list 'load-path "/data/matlab08b/java/extern/EmacsLink")
 (add-to-list 'load-path "~/Dropbox/Lisp/pony-mode")
 
 ;(setq cclookup-dir "~/Dropbox/OtherLisp/cclookup")
@@ -28,7 +34,7 @@
 
 ;; Define locations of some other files
 (setq save-place-file "~/.emacs.d/saveplace") ;; keep my ~/ clean
-(setq-default save-place t) ;; activate it for all buffers
+;(setq-default save-place t) ;; activate it for all buffers
 (setq savehist-additional-variables    ;; also save...
       '(search-ring regexp-search-ring)    ;; ... my search entries
       savehist-file "~/.emacs.d/savehist") ;; keep my home clean
@@ -44,11 +50,11 @@
 	       cl
 	       uniquify
 	       ido
-	       saveplace
+					;	       saveplace
 	       scala-mode-auto
 	       yasnippet
 	       smex
-	       zenburn
+					;	       zenburn
 	       highlight-parentheses
 	       smart-tab
 	       browse-kill-ring
